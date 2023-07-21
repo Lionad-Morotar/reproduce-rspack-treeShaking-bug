@@ -1,0 +1,18 @@
+{
+  "name": "reproduce-rspack-amulty-assets-chunk-emits-hmr-bug",
+  "private": true,
+  "scripts": {
+    "build": "pnpm _build:treeshake && pnpm _build:no-treeshake",
+    "_build:treeshake": "npx rspack build --config .template/build/treeshake.js",
+    "_build:no-treeshake": "npx rspack build --config .template/build/no-treeshake.js"
+  },
+  "dependencies": {
+    "@antv/x6": "^2.11.5",
+    "vue": "3.3.4"
+  },
+  "devDependencies": {
+    "@rspack/cli": "^0.2.8",
+    "@rspack/plugin-html": "^0.2.8",
+    "vue-loader": "^17.2.2"
+  }
+}
